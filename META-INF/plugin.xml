@@ -1,0 +1,46 @@
+<idea-plugin version="2">
+  <id>in.xiv.cs</id>
+  <name>CSharp</name>
+  <version>0.1</version>
+  <vendor email="d@xiv.in" url="http://xiv.in">XIV</vendor>
+
+  <description><![CDATA[
+      CSharp language support.<br>
+      <em>very experimental state</em><br/>Right now only syntax support and grammar validation
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Alpha:First version ever.<br>
+
+    ]]>
+  </change-notes>
+
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+  <depends>com.intellij.modules.lang</depends>
+  <!-- please see https://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileTypeFactory implementation="in.xiv.cs.CsFileTypeFactory"/>
+    <lang.parserDefinition language="CS" implementationClass="in.xiv.cs.CsParserDefinition"/>
+    <lang.syntaxHighlighterFactory key="CS" implementationClass="in.xiv.cs.CsSyntaxHighlighterFactory"/>
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <application-components>
+    <!-- Add your application components here -->
+  </application-components>
+
+  <project-components>
+    <!-- Add your project components here -->
+  </project-components>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
